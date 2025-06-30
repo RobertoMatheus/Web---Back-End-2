@@ -16,10 +16,10 @@ class Produto {
 id_produto:  this.id_produto,
 categoria: this.categoria
  });
- console.log(" Produto inserido:", result.insertedId);
+ Logger.log(" Produto inserido:", result.insertedId);
  client.close();
  } catch (error) {
- console.log("Erro ao inserir produto:", error);
+ Logger.log("Erro ao inserir produto:", error);
  }
  }
 
@@ -28,7 +28,7 @@ categoria: this.categoria
  const { db, client } = await connect();
  const Produto = await
 db.collection("Produto").find(filtro).toArray();
- console.log("Produtos encontrados:", Produto);
+ Logger.log("Produtos encontrados:", Produto);
  client.close();
  } catch (error) {
  Logger.log("Erro ao buscar Produtos: " + error);
@@ -40,7 +40,7 @@ db.collection("Produto").find(filtro).toArray();
  const { db, client } = await connect();
  const Produto = await
 db.collection("Produto").deleteMany(filtro);
- console.log("Produtos deletados:", Produto.deletedCount);
+ Logger.log("Produtos deletados:", Produto.deletedCount);
  client.close();
  } catch (error) {
  Logger.log("Erro ao deletar Produtos: " + error);
@@ -54,7 +54,7 @@ db.collection("Produto").deleteMany(filtro);
 db.collection("Produto").updateMany(filtro, {
  $set: novosDados,
  });
- console.log("Produtos atualizados:", result.modifiedCount);
+ Logger.log("Produtos atualizados:", result.modifiedCount);
  client.close();
  } catch (error) {
  Logger.log("Erro ao atualizar Produtos: " + error);
