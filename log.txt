@@ -1,3 +1,12 @@
 [2025-06-01T17:37:20.222Z] - Erro ao buscar usuários: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
 [2025-06-01T19:28:45.994Z] - Erro ao deletar Produtos: MongoServerError: BSON field 'delete.deletes.q' is the wrong type 'int', expected type 'object'
 [2025-06-02T18:38:08.452Z] - Erro ao deletar Produtos: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+[2025-06-30T11:41:29.031Z] -  Produto inserido:
+[2025-06-30T12:04:30.940Z] -  Produto inserido:
+[2025-06-30T12:46:55.116Z] - Produtos encontrados:
+[2025-06-30T12:48:12.981Z] - Erro ao buscar Produtos: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+[2025-06-30T12:51:41.078Z] - Produtos deletados:
+[2025-06-30T12:57:55.534Z] -  Produto inserido:
+[2025-06-30T12:58:26.021Z] - Produtos deletados:
+[2025-06-30T12:58:58.604Z] - Produtos encontrados:
+[2025-06-30T12:59:24.428Z] -  Produto inserido:

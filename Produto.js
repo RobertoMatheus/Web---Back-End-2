@@ -19,7 +19,7 @@ categoria: this.categoria
  Logger.log(" Produto inserido:", result.insertedId);
  client.close();
  } catch (error) {
- Logger.log("Erro ao inserir produto:", error);
+ console.log("Erro ao inserir produto:", error);
  }
  }
 
@@ -29,6 +29,7 @@ categoria: this.categoria
  const Produto = await
 db.collection("Produto").find(filtro).toArray();
  Logger.log("Produtos encontrados:", Produto);
+ console.log("Produtos encontrados:", Produto);
  client.close();
  } catch (error) {
  Logger.log("Erro ao buscar Produtos: " + error);
@@ -39,7 +40,7 @@ db.collection("Produto").find(filtro).toArray();
  try {
  const { db, client } = await connect();
  const Produto = await
-db.collection("Produto").deleteMany(filtro);
+db.collection("Produto").deleteOne();
  Logger.log("Produtos deletados:", Produto.deletedCount);
  client.close();
  } catch (error) {
